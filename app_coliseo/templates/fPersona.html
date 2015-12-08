@@ -1,0 +1,35 @@
+
+
+{% extends 'index.html' %}
+
+{% block persona %}
+
+
+<div class="panel panel-info">
+  <div class="panel-heading">PERSONAS</div>
+  <div class="panel-body">
+    <form  class="form-horizontal" method="POST" action="">{% csrf_token %}
+    	<div class="form-group" style="width:50%;margin:auto;">
+    	
+        Codigo:{{form.id}}<br />
+        Primer Nombre:{{form.p_nombre}}<br />
+        Segundo Nombre:{{form.o_nombre}}<br />
+        Primer Apellido:{{form.p_apellido}}<br />
+        Segundo Apellido:{{form.s_apellido}}<br />
+        Tipo de Identificacion:{{form.id_tipo_identificacion}}<br />
+        No Identificacion:{{form.identificacion}}<br />
+        Fecha de nacimiento:{{form.fecha_nacimiento}}<br />
+        Genero:{{form.genero}} <br />
+        Arbitro:{{form.es_arbitro}}<br />
+        fotografia:{{form.fotografia}}<br />
+
+        <button type="submit" class="btn btn-info" style="margin-left:40%">ACEPTAR</button>   
+
+    	</div>
+    		
+	</form>
+  </div>
+</div>
+
+
+{% endblock %}

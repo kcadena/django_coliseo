@@ -1,0 +1,26 @@
+
+
+{% extends 'index.html' %}
+
+{% block persona %}
+
+
+<div class="panel panel-info">
+  <div class="panel-heading">Jugador</div>
+  <div class="panel-body">
+    <form  class="form-horizontal" method="POST" action="">{% csrf_token %}
+    	<div class="form-group" style="width:30%;margin:auto;">
+
+        ID del Jugador:{{form.id_jugador}}<br />
+        ID del Equipo{{form.id_equipo}}<br />
+        ID de la Persona{{form.id_persona}}<br />
+        <button type="submit" class="btn btn-info" style="margin-left:40%">ACEPTAR</button>   
+
+    	</div>
+    		
+	</form>
+  </div>
+</div>
+
+
+{% endblock %}
